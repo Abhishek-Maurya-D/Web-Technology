@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Positioning</title>
+    <style>
+        /* .static {
+            position: static;
+        }
+        
+        .relative {
+            position: relative;
+            top: 50px;
+            left: 50px;
+        } */
+        
+        .fixed {
+            position: fixed;
+            top: 30px;
+            left: 40px;
+        }
+        
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .div {
+            width: 200px;
+            height: 200px;
+            overflow: auto;
+            border: 2px solid red;
+        }
+        
+        .sticky {
+            position: sticky;
+            top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Positioning Types in CSS</h1>
+    <p>We are demonstrating the different types of positioning in CSS.</p>
+    <div class="div relative">
+        <div class="div absolute">
+        </div>
+    </div>
+    <div class="div">
+        <p>Web Technology</p>
+        <p>We are learning about the different web technologies that are used in web development. The different topics covered in this course are HTML, XML, CSS, Java Script, Node.js, MongoDB, Java Servlets etc.</p>
+        <h1 class="sticky">HTML</h1>
+        <p>
+            HTML is the standard language used to structure and display content on the web. It defines elements like headings, paragraphs, links, images, and more. HTML is the foundation of web pages, organizing the content and giving it meaning. However, it primarily
+            focuses on structure, not styling or formatting.
+        </p>
+    </div>
+</body>
+
+</html>

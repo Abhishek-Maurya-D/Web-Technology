@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Popup Dialog Boxes in JavaScript</title>
+    <script>
+        let course = prompt("Input a course ", "TAFL ")
+        document.write(typeof course)
+        document.write("<br>")
+        let isConfirmed = confirm("The input you have given is " + course + "Are you sure ? ")
+        document.write(typeof isConfirmed)
+        document.write("<br>")
+        if (isConfirmed)
+            alert("You selected the course " + course + "to study.")
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

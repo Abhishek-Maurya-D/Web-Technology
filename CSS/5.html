@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS - Advanced - Display - Demo</title>
+    <style>
+        p {
+            background-color: pink;
+        }
+        
+        .inlineelements {
+            display: inline;
+        }
+        
+        .blockelements {
+            display: block;
+        }
+        
+        .inlineblock {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .hidden {
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="inlineelements">Hyper Text Markup Language</p>
+    <p class="inlineelements">I am demonstrating display property under CSS Advanced.</p>
+    <div class="hidden" style="border: 2px solid black; width:200px; height: 200px;">
+        This element will be hidden.
+    </div>
+    <p>eXtensible Markup Language<span class="blockelements" style="text-decoration-line: underline; background-color: aqua;">(XML)</span></p>
+    <p>Java Script is a <span class="inlineblock" style="background-color: gray;">very popular</span>scripting language.</p>
+</body>
+
+</html>

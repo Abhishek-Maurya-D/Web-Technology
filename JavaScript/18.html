@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects in JavaScript</title>
+    <script>
+        let topic = {
+            name: "JavaScript",
+            course: "Web Technology",
+            unit: 3
+        };
+        console.log(topic.course)
+        console.log(topic["name"])
+        let propName = "unit"
+        console.log(topic[propName])
+        let propNameFirst = "un"
+        let propNameSecond = "it"
+        console.log(topic[propNameFirst + propNameSecond])
+        topic.branch = "CSE"
+        console.log(topic)
+        topic.course = "WT"
+        console.log(topic)
+        delete topic.branch
+        console.log(topic)
+        topic.printTopic = function() {
+            console.log("I am here to print the " + this.name + " details.");
+        }
+        console.log(topic)
+        topic.printTopic();
+
+        function Topic(name, course, unit) {
+            this.name = name;
+            this.course = course;
+            this.unit = unit;
+        }
+        let topic1 = new Topic("HTML", "WT", 1)
+        let topic2 = new Topic("CSS", "WT", 2)
+        let topic3 = new Topic("JS", "WT", 3)
+        console.log(topic1)
+        console.log(topic2)
+        console.log(topic3)
+        for (let prop in topic1) {
+            console.log(prop + ": " + topic1[prop])
+        }
+        console.log(Object.keys(topic2))
+        console.log(Object.values(topic2))
+        console.log(Object.entries(topic2))
+        for (let entry of Object.entries(topic2)) {
+            console.log(entry)
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

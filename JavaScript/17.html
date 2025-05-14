@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms in JavaScript</title>
+</head>
+
+<body>
+    <form name="numOperations">
+        <label for="num1">Number1: </label>
+        <input type="text" id="num1" name="number" value="20"><br>
+        <label for="num2">Number2: </label>
+        <input type="text" id="num2" name="number" value="30"><br>
+        <label for="num3">Number3: </label>
+        <input type="text" id="num3" name="number" value="50"><br>
+        <label for="result">Result: </label>
+        <input type="text" id="result" name="result" readonly><br>
+        <button id="btnSum" type="button" name="sum" onclick="doSum()">Sum</button>
+    </form>
+
+    <script>
+        function doSum() {
+            // Access all inputs with the name "number"
+            let numberElements = document.forms.numOperations.elements["number"];
+            let sum = 0;
+
+            // Iterate over the elements and calculate the sum
+            for (let i = 0; i < numberElements.length; i++) {
+                let value = numberElements[i].value;
+                if (isNaN(value) || value.trim() === "") {
+                    alert("Please ensure all inputs are numeric.");
+                    return;
+                }
+                sum += parseFloat(value); // Convert to number and add
+            }
+
+            // Display the result
+            document.getElementById("result").value = sum;
+        }
+    </script>
+</body>
+
+</html>

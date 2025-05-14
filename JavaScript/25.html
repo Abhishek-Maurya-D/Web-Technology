@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function displayDoc() {
+            // Creating XMLHttpRequest object
+            var myObj = new XMLHttpRequest();
+            // Creating a callback function
+            myObj.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    //document.getElementById("sample").innerHTML = this.responseText;
+                    const data = JSON.parse(this.responseText);
+                    let outputHTML = "<ol>";
+                    data.forEach(person => {
+                        outputHTML += `<li>${person.name}, ${person.age} years old, from ${person.city}</li>`;
+                    });
+                    outputHTML += "</ol>";
+                    document.getElementById("sample").innerHTML = outputHTML;
+                } else {
+                    console.log("Error Found")
+                }
+            };
+            // Open the given file
+            myObj.open("GET", "http://localhost:8000/data.json", true);
+            // Sending the request to the server
+            myObj.send();
+        }
+    </script>
+    <h2>Getting Data</h2>
+    <p>Please click on the button to fetch data</p>
+    <button type="button" onclick="displayDoc()">Click Me</button>
+    <a href="http://localhost:8000/data.json">Load JSON</a>
+    <div id="sample" style="border: 1px solid black; width: 300px; height: 300px;">
+    </div>
+</body>
+</html

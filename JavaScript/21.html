@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date Object in JavaScript</title>
+    <script>
+        let dateObj = new Date()
+        document.write(dateObj)
+        document.write("<br>")
+        document.write(dateObj.getDay())
+        document.write("<br>")
+        document.write(dateObj.getMonth())
+        document.write("<br>")
+        document.write(dateObj.getDate())
+        document.write("<br>")
+        document.write(dateObj.getFullYear())
+        document.write("<br>")
+        document.write(dateObj.getHours())
+        document.write("<br>")
+        document.write(dateObj.getMinutes())
+        document.write("<br>")
+        document.write(dateObj.getSeconds())
+        document.write("<br>")
+        document.write(dateObj.getMilliseconds())
+        document.write("<br>")
+        dateObj.setHours(19)
+        document.write(dateObj)
+        document.write("<br>")
+        dateObj.setMonth(2)
+        document.write(dateObj)
+        document.write("<br>")
+        dateObj.setHours(19)
+        document.write(Date.now())
+        let newDate = new Date(1732021400891)
+        document.write("<br>" + newDate)
+        let newDate2 = new Date(2027, 5, 23, 22, 56)
+        document.write("<br>" + newDate2)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

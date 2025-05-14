@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Statements in JavaScript</title>
+    <script>
+        let a = 100;
+        let b = 100;
+        if (a < b) {
+            document.write("a is less than b");
+        } else if (a == b) {
+            document.write("a is equal to b");
+        } else {
+            document.write("a is greater than b ");
+        }
+        document.write("<br>")
+        let variab = 0;
+        if (variab)
+            document.write("Gateway");
+        else
+            document.write("classes");
+        document.write("<br>");
+        let day = 6;
+        switch (day) {
+            case 1:
+                document.write("Monday");
+                break;
+            case 3:
+                document.write("Wednesday");
+                break;
+            case 5:
+                document.write("Thursday");
+                break;
+            default:
+                document.write("Value is other than 1, 3, & 5!")
+        }
+        document.write("<br>")
+        let aVar = 1;
+        while (aVar < 3) {
+            document.write(aVar + "<br>");
+            aVar++;
+        }
+        while (aVar < 3);
+        aVar = 3;
+        do {
+            document.write(aVar + "<br>");
+            aVar++;
+        } while (aVar < 3);
+        let i = 0;
+        for (; i < 3; i++) {
+            document.write(i + "<br>");
+        }
+        programs = {
+            name: "B.Tech.",
+            code: "10"
+        }
+        for (let program in programs) {
+            document.write(program)
+            document.write(programs[program])
+            document.write("<br>")
+        }
+        let arr = [30, 34, 45, 67]
+        for (let num of arr) {
+            document.write(num + 2);
+            document.write("<br>")
+        }
+        document.write("<br>")
+        for (let i = 23; i < 45; i++) {
+            if (i == 30)
+                continue;
+            if (i == 40)
+                break;
+            if (i % 2 == 0)
+                document.write(i + "<br>");
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

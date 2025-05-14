@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>document Object in JavaScript</title>
+</head>
+
+<body>
+    <p id="para1" class="para">Document Object</p>
+    <p class="para">in JavaScript</p>
+
+    <form>
+        <input type="text" name="course">
+    </form>
+
+    <script>
+        document.write(document.title)
+            // document.title = "JavaScript 'document' object "
+        document.write("<br>")
+        document.write(document.documentElement.tagName)
+        document.write("<br>")
+        document.write(document.head.tagName)
+        document.write("<br>")
+        document.write(document.body.tagName)
+        document.write("<br>")
+        document.write(document.URL)
+        document.write("<br>")
+            // let elements = document.getElementsByTagName("p");
+            // let paraElement = elements[0]
+            // paraElement.innerHTML = "Document Object in JavaScript "
+            // paraElement = document.getElementById("para1")
+            // paraElement.innerHTML ="<b>We are studying about 'document'object. < /b>"
+        let elements = document.getElementsByClassName("para")
+        let paraElement1 = elements[0]
+        let paraElement2 = elements[1]
+        paraElement1.innerHTML = "Amol"
+        paraElement2.innerHTML = "Sharma"
+        let textField = document.getElementsByName("course")[0]
+        document.write(textField.tagName)
+        textField.setAttribute("placeholder", "Enter course here...")
+        document.querySelector(".para").innerHTML = "Gateway"
+        document.querySelectorAll(".para")[1].innerHTML = "Classes"
+        document.write(paraElement2.textContent)
+        paraElement2.textContent = "Sharma"
+        paraElement2.style.color = "lightblue"
+        document.write(textField.getAttribute("type "))
+        let divElement = document.createElement("div")
+        divElement.style.width = "100px"
+        divElement.style.height = "100px"
+        divElement.style.border = "1px solid black"
+        document.body.appendChild(divElement)
+        let paragraph1 = document.createElement("p")
+        paragraph1.textContent = "JavaScript"
+        divElement.appendChild(paragraph1)
+        let paragraph2 = document.createElement("p")
+        paragraph2.textContent = "We are studying "
+        divElement.insertBefore(paragraph2, paragraph1)
+            // divElement.replaceChild(paragraph2, paragraph1)
+            // divElement.removeChild(paragraph2)
+        document.write("<pre>")
+        document.write("Gateway")
+        document.write("Classes")
+        document.write("</pre>")
+        document.write("<pre>")
+        document.writeln("Gateway")
+        document.writeln("Classes")
+        document.write("</pre>")
+    </script>
+</body>
+</html

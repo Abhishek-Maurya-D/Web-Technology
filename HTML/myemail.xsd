@@ -1,0 +1,51 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="email">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="header">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="from">
+                                <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="email" type="xs:string"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="to">
+                                <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="email" type="xs:string"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="subject" type="xs:string"/>
+                            <xs:element name="date" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="body" type="xs:string"/>
+                <xs:element name="attachments">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="attachment">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="filename" type="xs:string"/>
+                            <xs:element name="filetype" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="size" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

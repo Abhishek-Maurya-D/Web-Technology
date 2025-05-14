@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Attribute Selectors</title>
+    <style>
+        /* Select all elements with a 'placeholder' attribute and give them a red border */
+        
+        [placeholder] {
+            border: 1px solid red;
+        }
+        /* Select elements with the exact placeholder value 'Enter text here ...', make text bold and blue */
+        
+        [placeholder="Enter text here ..."] {
+            font-weight: bold;
+            color: blue;
+        }
+        /* Select elements whose 'placeholder' contains the substring 'xt h' */
+        
+        [placeholder*="xt h"] {
+            color: blueviolet;
+        }
+        /* Select elements whose 'placeholder' starts with 'Enter' */
+        
+        [placeholder^="Enter"] {
+            text-decoration-line: line-through;
+        }
+        /* Select elements whose 'placeholder' ends with 'e ..' */
+        
+        [placeholder$="e .."] {
+            font-style: italic;
+        }
+        /* Select elements whose 'placeholder' contains the word 'name' as a separate word */
+        
+        [placeholder~="name"] {
+            border: 5px dashed brown;
+        }
+        /* Select elements whose 'placeholder' value starts with 'Enter' followed by a hyphen or space */
+        
+        [placeholder|="Enter"] {
+            border: 10px solid pink;
+        }
+        /* Select elements with type='password' whose 'placeholder' starts with 'Enter ' and make their text green */
+        
+        [type="password"][placeholder^="Enter "] {
+            color: green;
+        }
+        /* Select <div> elements with a 'data-category' attribute that starts with 'webtech' */
+        
+        div[data-category|="webtech"] {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <!-- Matches multiple selectors:
+             - [placeholder]: Adds red border
+             - [placeholder="Enter text here ..."]: Text is bold and blue
+             - [placeholder*="xt h"]: Text is blueviolet -->
+        <input type="text" placeholder="Enter text here ..">
+
+        <!-- Matches:
+             - [placeholder]: Adds red border
+             - [placeholder^="Enter"]: Text has a line-through
+             - [placeholder|="Enter"]: Adds pink border -->
+        <input type="text" placeholder="Enter ">
+
+        <!-- Matches:
+             - [placeholder]: Adds red border
+             - [placeholder^="Enter"]: Text has a line-through
+             - [type="password"][placeholder^="Enter "]: Text is green -->
+        <input type="password" placeholder="Enter password here...">
+
+        <!-- Matches:
+             - div[data-category|="webtech"]: Adds green border -->
+        <div data-category="webtech CSS">CSS</div>
+
+        <!-- Matches:
+             - div[data-category|="webtech"]: Adds green border -->
+        <div data-category="webtech HTML">HTML</div>
+
+        <!-- Does not match any selector as 'data-category' does not start with 'webtech' -->
+        <div data-category="dbms Normalization">Normalization</div>
+    </form>
+</body>
+
+</html>

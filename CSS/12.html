@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Sprites</title>
+    <style>
+        .facebook,
+        .instagram,
+        .whatsapp,
+        .youtube {
+            background-image: url('Sprite.png');
+            background-repeat: no-repeat;
+            width: 145px;
+            height: 145px;
+            border: 5px solid red;
+        }
+        
+        .facebook {
+            background-position: 0px 0px;
+        }
+        
+        .instagram {
+            background-position: -145px 0px;
+        }
+        
+        .whatsapp {
+            background-position: -290px 0px;
+        }
+        
+        .youtube {
+            background-position: -435px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Facebook</h1>
+    <div class="facebook"></div>
+    <h1>Instagram</h1>
+    <div class="instagram"></div>
+    <h1>Whatsapp</h1>
+    <div class="whatsapp"></div>
+    <h1>Youtube</h1>
+    <div class="youtube"></div>
+</body>
+
+</html>

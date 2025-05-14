@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions in JavaScript</title>
+    <script>
+        function multiply(a = 5, b = 8) {
+            return a * b;
+        }
+        document.write(multiply(4, 5))
+        document.write("<br>")
+        document.write(multiply(4))
+        document.write("<br>")
+        document.write(multiply())
+        document.write("<br>")
+        document.write("<br>" + doubles(4))
+            //Function Declaration
+        function doubles(num) {
+            return num * 2;
+        }
+        //Function Expression
+        let doubleNum = function(num) {
+            return num * 2;
+        };
+        document.write("<br>" + doubleNum(7))
+        let subtract = (a, b) => a - b;
+        document.write("<br>" + subtract(5, 2))
+        let showCourse = (course) => {
+            let message = "You are studying " + course;
+            return message;
+        }
+        document.write("<br>" + showCourse("DBMS"))
+        let halves = num => num / 2;
+        document.write("<br>" + halves(40));
+        let print = () => {
+            return "Hello World"
+        };
+        document.write("<br>" + print())
+        document.write("<br>")
+        document.write(doubleNum)
+        document.write("<br>")
+        document.write(doubleNum(6))
+    </script>
+</head>
+
+<body>
+</body>
+</html

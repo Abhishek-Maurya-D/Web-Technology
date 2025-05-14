@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Tables Demo</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: separate;
+            border-spacing: 10px 10px;
+            caption-side: top;
+            empty-cells: show;
+        }
+        /* tr:nth-child(even){
+background-color: aliceblue;
+}
+tr:nth-child(odd) {
+background-color: lightgray;
+} */
+        
+        tr:hover {
+            background-color: aqua;
+        }
+        
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            /* width:100px;
+height: 100px; */
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Students List</caption>
+        <tr>
+            <th>Roll NO.</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td style="background-color: lightgray;">Akshay Tomar</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Subhash Tomar</td>
+        </tr>
+    </table>
+</body>
+
+</html>

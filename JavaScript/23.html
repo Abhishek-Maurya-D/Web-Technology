@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Day and Time</title>
+    <style>
+        .time-display {
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="time-display" id="timeDisplay"></div>
+    <script>
+        function displayDateAndTime() {
+            var now = new Date();
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            // Get current day
+            var currentDay = dayNames[now.getDay()];
+            // Get current time
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            // Format the hours to show AM/PM
+            var period = (hours >= 12) ? "PM" : "AM";
+            hours = (hours > 12) ? hours - 12 : hours;
+            hours = (hours == 0) ? 12 : hours; // Adjust if hours is 0(midnight)
+            // Ensure minutes and seconds are two digits
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+            // Format time and display the output
+            var timeString = "Today is : " + currentDay + ".<br>Current time is : " + hours + " " + period + " : " + minutes + " : " + seconds;
+            document.getElementById('timeDisplay').innerHTML = timeString;
+        }
+        // Call the function once to display the initial time
+        displayDateAndTime();
+        // Update the time every second
+        setInterval(displayDateAndTime, 1000);
+    </script>
+</body>
+
+</html>

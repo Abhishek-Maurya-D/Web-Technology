@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms in JavaScript</title>
+    <script>
+        function doSum() {
+            let numbers = document.forms[0].elements.number;
+            let val1 = numbers[0].value;
+            let val2 = numbers[1].value;
+            let val3 = numbers[2].value;
+            if (isNaN(val1) || isNaN(val2) || isNaN(val3)) {
+                alert("You have given non-numeric input.Please check.")
+            } else {
+                let sum = parseInt(val1) + parseInt(val2) + parseInt(val3);
+                let result = document.getElementById("result")
+                result.value = sum;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="numOperations">
+        <label for="num1">Number1: </label>
+        <input type="text" id="num1" name="number" value="20"><br>
+        <label for="num2">Number2: </label>
+        <input type="text" id="num2" name="number"><br>
+        <label for="num3">Number3: </label>
+        <input type="text" id="num3" name="number"><br>
+        <label for="result">Result: </label>
+        <input type="text" id="result" name="result"><br>
+        <button id="btnSum" type="button" name="sum" onclick="doSum()">Sum</button>
+    </form>
+</body>
+
+</html>

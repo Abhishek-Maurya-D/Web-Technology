@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrays in JavaScript</title>
+    <script>
+        let arr = [23, 45, 89, 93, "WT", false];
+        document.write(arr);
+        document.write("<br>" + arr.length);
+        document.write("<br>" + arr[4]);
+        document.write("<br>" + arr.push(12))
+        document.write("<br>" + arr);
+        document.write("<br>" + arr.pop())
+        document.write("<br>" + arr);
+        document.write("<br>" + arr.unshift(4, 5))
+        document.write("<br>" + arr);
+        document.write("<br>" + arr.shift())
+        document.write("<br>" + arr)
+        arr[5] = 45;
+        document.write("<br>" + arr)
+        arr[6] = 45;
+        document.write("<br>" + arr)
+        document.write("<br>" + arr.indexOf(45))
+        document.write("<br>" + arr.lastIndexOf(45))
+        document.write("<br>" + arr.includes(23))
+        document.write("<br>" + arr.includes("WT"))
+        arr.splice(2, 1, 56, 33, 9);
+        document.write("<br>" + arr);
+        document.write("<br>" + arr.slice(3, 6))
+        let arrToConcat = [98, 31]
+        document.write("<br>" + arr.concat(arrToConcat))
+        document.write("<br>" + arr)
+        document.write("<br>" + arr.join("-"))
+        document.write("<br>" + arr.reverse())
+        document.write("<br>" + arr)
+        document.write("<br>" + arr.sort())
+        document.write("<br>" + arr.sort((a, b) => a - b))
+        document.write("<br>" + arr.map((num) => num + 3))
+        document.write("<br>")
+        document.write(arr)
+        document.write("<br>")
+        arr.forEach((num) => document.write("- >" + (num - 3)))
+        document.write("<br>" + arr.filter((num) => num % 2 == 0))
+        let arrToSum = [1, 2, 3]
+        document.write("<br>" + arrToSum.reduce((a, b) => a + b))
+        document.write("<br>" + arr.find((num) => num < 10))
+        document.write("<br>" + arr.findIndex((num) => num < 10))
+        let a = 5
+        document.write("<br>" + Array.isArray(a))
+        document.write("<br>" + Array.isArray(arr))
+        document.write("<br>" + arr.every((num) => num > 4))
+        document.write("<br>" + arr.every((num) => num > 10))
+        document.write("<br>" + arr.at(-4))
+        document.write("<br>" + arr.toString())
+        document.write("<br>" + arr)
+        document.write("<br>")
+        for (let i = 0; i < arr.length; i++)
+            document.write(arr[i])
+        document.write("<br>")
+        for (let element of arr)
+            document.write(element)
+        let threedarr = [
+            [
+                [1, 2],
+                [3, 4],
+                [5, 6]
+            ],
+            [
+                [7, 8],
+                [9, 10],
+                [11, 12]
+            ]
+        ]
+        document.write("<br>" + threedarr[1][0][1])
+        document.write("<br>")
+        for (let x of threedarr) {
+            for (let y of x) {
+                for (let z of y)
+                    document.write(z)
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+</html
